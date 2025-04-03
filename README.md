@@ -1,5 +1,6 @@
 # HCD-project
 Human Centered Design
+Het proces wordt bijgehouden in de wiki!
 
 Voor het project Human Centered Design moet er een persoonlijke app worden gemaakt voor Eric Groot Kormelink. 
 <br>
@@ -10,3 +11,4 @@ Voor het project Human Centered Design moet er een persoonlijke app worden gemaa
 Bron : https://www.digitoegankelijk.nl/het-verhaal-van-eric-groot-kormelink
 
 <img width="1534" alt="Scherm­afbeelding 2025-04-03 om 11 41 41" src="https://github.com/user-attachments/assets/8725f6a6-2d29-44bc-8ef1-6474e8bda764" />
+
