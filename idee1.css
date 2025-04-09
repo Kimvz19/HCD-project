@@ -2,41 +2,75 @@ form {
     display: flex;
     flex-direction: column;
     gap: 25px;
-
-    &>label {
-        text-align: center;
-
-        & input {
-            background-color: white;
-            text-align: center;
-            padding: 15px 50px;
-            border-radius: 15px;
-            border-color: transparent;
-        }
-    }
+    padding: 20px;
 }
 
-section{
-    display: flex;
-    flex-direction: column;
+form > label {
+    text-align: center;
 }
 
-.chat-ideas{
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-}
-
-section label{
+form input[type="text"] {
+    width: 100%;
+    max-width: 500px;
     background-color: white;
     text-align: center;
-    padding: 10px 20px;
+    padding: 15px 50px;
+    font-size: 1.2rem;
     border-radius: 15px;
-    border-color: transparent;
-
-    & input{
-        display: none;
-    }
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
+/* General section layout */
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
+/* Chat ideas styling */
+.chat-ideas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+/* Chat buttons (labels) */
+.chat-ideas label {
+    background-color: var(--color-white);
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    font-weight: var(--font-normal);
+    font-family: var(--font-family);
+    text-align: center;
+    cursor: pointer;
+    flex-grow: 1;
+    flex-basis: calc(33.33% - 20px); /* 3 per row on desktop */
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.chat-ideas label:hover {
+    background-color: var(--color-beige);
+}
+
+.chat-ideas input[type="checkbox"] {
+    display: none;
+}
+
+/* Selected effect */
+.chat-ideas input[type="checkbox"]:checked + label,
+.chat-ideas label:has(input:checked) {
+    border-color: var(--color-black);
+    background-color: var(--color-beige);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .chat-ideas label {
+        flex-basis: 100%;
+    }
+}
