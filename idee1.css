@@ -1,0 +1,42 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    &>label {
+        text-align: center;
+
+        & input {
+            background-color: white;
+            text-align: center;
+            padding: 15px 50px;
+            border-radius: 15px;
+            border-color: transparent;
+        }
+    }
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-ideas{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+section label{
+    background-color: white;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border-color: transparent;
+
+    & input{
+        display: none;
+    }
+}
+
+
