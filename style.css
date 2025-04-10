@@ -4,6 +4,8 @@
     --color-white: #fff;
     --color-grey: lightgrey;
     --color-beige: #DDD6CE;
+    --color-blue: #e1f0ff;
+    --color-pink: #fde2f3;
     --font-family: "Montserrat", sans-serif;
     --font-optical-sizing: auto;
     /* font weight is 100 tot 900 */
@@ -79,7 +81,7 @@ header img {
 }
 
 header a{
-    background-color: var(--color-beige);
+    background: linear-gradient(135deg, #fde2f3, #e1f0ff);
     padding: 10px 50px;
     border-radius: 15px;
     color: var(--color-black);

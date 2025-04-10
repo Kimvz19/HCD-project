@@ -11,14 +11,31 @@ form > label {
 
 form input[type="text"] {
     width: 100%;
-    max-width: 500px;
+    min-height: 50px;
+    max-height: 200px;
     background-color: white;
     text-align: center;
     padding: 15px 50px;
-    font-size: 1.2rem;
     border-radius: 15px;
     border: none;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-size: 1.3em;
+}
+
+textarea#chatInput {
+    background: white;
+    padding: 15px 50px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    text-align: center;
+    resize: none;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease;
+    font-family: var(--font-family);
+    min-height: 50px;
+    max-height: 200px;
 }
 
 /* General section layout */
@@ -54,7 +71,7 @@ section {
 }
 
 .chat-ideas label:hover {
-    background-color: var(--color-beige);
+    background: linear-gradient(135deg, #fde2f3, #e1f0ff);
 }
 
 .chat-ideas input[type="checkbox"] {
@@ -64,9 +81,27 @@ section {
 /* Selected effect */
 .chat-ideas input[type="checkbox"]:checked + label,
 .chat-ideas label:has(input:checked) {
-    border-color: var(--color-black);
-    background-color: var(--color-beige);
+    border-color: var(--color-pink);
+    background-color: var(--color-blue);
 }
+
+.control-chat{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+.control-chat button{
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--color-pink);
+    font-size: 1.3em;
+}
+
+
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -74,3 +109,5 @@ section {
         flex-basis: 100%;
     }
 }
+
+
