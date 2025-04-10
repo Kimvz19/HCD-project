@@ -38,12 +38,14 @@ textarea#chatInput {
     font-size: 1rem;
     text-align: center;
     resize: none;
-    overflow: hidden;
+    overflow-y: auto; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.2s ease;
     font-family: var(--font-family);
     min-height: 50px;
     max-height: 200px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* General section layout */
@@ -78,9 +80,9 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.chat-ideas label:hover {
+/* .chat-ideas label:hover {
     background: linear-gradient(135deg, #fde2f3, #e1f0ff);
-}
+} */
 
 .chat-ideas input[type="checkbox"] {
     display: none;
@@ -100,15 +102,36 @@ align-items: center;
 justify-content: center;
 }
 
-.control-chat button{
+.control-chat button {
     width: 100%;
     padding: 15px 20px;
     border-radius: 15px;
     border: none;
     font-size: 1.3em;
     background-color: var(--color-pink);
-
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    font-family: var(--font-family);
 }
+
+.control-chat button:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px); /* simuleert indrukken */
+    opacity: 0.95;
+}
+
+/* Voor meerdere knoppen met aparte kleuren */
+.control-chat button:nth-of-type(1) {
+    background-color: var(--color-pink);
+}
+
+.control-chat button:nth-of-type(2) {
+    background-color: rgb(245, 212, 251);
+}
+
 
 .control-chat-blue button{
     padding: 5px 5px;
@@ -132,7 +155,13 @@ justify-content: center;
     }
 }
 
-
+#copyMessage{
+    background-color: rgb(183, 244, 183);
+    padding: 15px 20px;
+    border-radius: 15px;
+    text-align: center;
+    display: none;
+}
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .chat-ideas label {

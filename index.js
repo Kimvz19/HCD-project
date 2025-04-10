@@ -25,3 +25,43 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const textarea = document.getElementById('chatInput');
+
+    function autoResize() {
+        textarea.style.height = 'auto';
+        textarea.style.height = textarea.scrollHeight + 'px';
+    }
+
+    // Trigger bij invoer
+    textarea.addEventListener('input', autoResize);
+
+    // Initiale check (bijv. als er al tekst in staat)
+    autoResize();
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const copyBtn = document.querySelector('button:nth-of-type(2)'); // tweede knop = copy
+    const copyMessage = document.getElementById('copyMessage');
+    const chatInput = document.getElementById('chatInput');
+
+    copyBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // voorkom standaard gedrag
+
+        // Kopieer tekst uit de textarea
+        const text = chatInput.value;
+        navigator.clipboard.writeText(text).then(() => {
+            // Laat de gekopieerd-message zien
+            copyMessage.style.display = 'inline';
+        });
+    });
+
+    // Verberg de melding als ergens anders wordt geklikt
+    document.addEventListener('click', (e) => {
+        if (!copyBtn.contains(e.target)) {
+            copyMessage.style.display = 'none';
+        }
+    });
+});
+
