@@ -164,3 +164,40 @@ carousel.addEventListener("scroll", () => {
     dot.classList.toggle("active", i === index);
   });
 });
+
+
+//  filter options 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const filterType = btn.dataset.filter;
+            const cards = document.querySelectorAll(".card");
+
+            cards.forEach(card => {
+                const ul = card.querySelector("ul");
+                if (!ul) return;
+
+                const items = Array.from(ul.querySelectorAll("li"));
+
+                let sortedItems;
+                if (filterType === "az") {
+                    sortedItems = items.sort((a, b) =>
+                        a.innerText.localeCompare(b.innerText)
+                    );
+                } else if (filterType === "za") {
+                    sortedItems = items.sort((a, b) =>
+                        b.innerText.localeCompare(a.innerText)
+                    );
+                } else {
+                    return;
+                }
+
+                ul.innerHTML = "";
+                sortedItems.forEach(item => ul.appendChild(item));
+            });
+        });
+    });
+});

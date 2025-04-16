@@ -314,21 +314,34 @@ form > label {
         border-radius: 15px;
         text-align: center;
         display: none;
+        font-family: var(--font-family);
     }
 
-    .filter-options{
-        margin: 5px;
+    .filter-container {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: center;
     }
-
-    .filter-options button{
-        padding: 10px 30px;
-        border-radius: 10px;
-        border-color: transparent;
-        color: white;
-        background-color: #8EC2E7;
-
-        &:nth-of-type(1){
-            background-color: #3485BF;
-        }
+    
+    .filter-options {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
     }
+    
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        border: none;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        border-radius: 6px;
+        font-family: 'Montserrat', sans-serif;
+        transition: background-color 0.2s ease;
+    }
+    
+ 
+    .filter-btn:hover {
+        background-color: #ddd;
+    }
+    
 
