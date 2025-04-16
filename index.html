@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HCD project - Eric</title>
     <link rel="stylesheet" href="style.css">
-
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,17 +20,79 @@
         <h1>Hey there, Eric</h1>
         <a href="Idee1.html">idee 1</a>
     </header>
+
     <main>
-        <article>
-            <!-- <h2>PickChatSwipe</h2> -->
+        <form>
+
             <h2>TapChat 👆</h2>
             <p>Write or swipe your sentences then copy & paste</p>
- 
-            <h1> Klik boven in de header op idee 1: daar staat mijn eerste uitgewerkte idee</h1>
-    
-        </article>
 
+            <label for="chatInput">
+                <textarea id="chatInput" placeholder="Tap your chat"></textarea>
+            </label>
+
+            <!-- carousel -->
+
+            <div class="carousel-container">
+                <div class="carousel-scroll">
+
+                    <section class="card">
+                        <h3>Zelfgemaakte zinnen</h3>
+                        <textarea id="chatInput" placeholder="tap tap"></textarea>
+
+                        <ul>
+                            <li><label><input type="checkbox"> Ja</label></li>
+                            <li><label><input type="checkbox"> Nee</label></li>
+                            <li><label><input type="checkbox"> Top, dankje!</label></li>
+                            <li><label><input type="checkbox"> Sorry voor de late reactie!</label></li>
+                        </ul>
+                    </section>
+
+
+                    <section class="card">
+                        <h3>Chatgeschiedenis</h3>
+                        <ul>
+                            <li><label><input type="checkbox"> Ik ben onderweg!</label></li>
+                            <li><label><input type="checkbox"> Alles goed?</label></li>
+                            <li><label><input type="checkbox"> Ik heb het script bekeken.</label></li>
+                        </ul>
+                    </section>
+
+
+                    <section class="card">
+                        <h3>Theater</h3>
+                        <ul>
+                            <li><label><input type="checkbox"> Ik heb het script ontvangen!</label></li>
+                            <li><label><input type="checkbox"> Ik ga er naar kijken</label></li>
+                            <li><label><input type="checkbox"> heb toevoegen toegepast</label></li>
+                        </ul>
+                    </section>
+
+                    <section class="card">
+                        <h3>Relatie</h3>
+                        <ul>
+                            <li><label><input type="checkbox"> Hey schatje</label></li>
+                            <li><label><input type="checkbox"> Hoe gaat het met je? </label></li>
+                            <li><label><input type="checkbox"> Mis je me?</label></li>
+                            <li><label><input type="checkbox"> Ik mis jou ook!</label></li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="carousel-dots">
+                </div>
+            </div>
+
+            <section class="control-chat">
+                <button type="reset">Reset</button>
+                <button type="button">Copy</button>
+            </section>
+
+            <output id="copyMessage">Gekopieerd!</output>
+
+        </form>
     </main>
+
     <footer>
         <p>footer</p>
     </footer>

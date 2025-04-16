@@ -5,6 +5,7 @@
     --color-grey: lightgrey;
     --color-beige: #DDD6CE;
     --color-blue: #e1f0ff;
+    --color-blue-light: #E2F2FE;
     --color-pink: #fde2f3;
     --font-family: "Montserrat", sans-serif;
     --font-optical-sizing: auto;
@@ -31,7 +32,7 @@ header {
 }
 
 main {
-    background-color: var(--color-grey);
+    background-color: var(--color-blue-light);
     color: var(--color-black);
     /* height: 85vh; */
 }
@@ -46,7 +47,6 @@ main,
 footer {
     display: flex;
     justify-content: center;
-
 }
 
 h1,
@@ -59,6 +59,15 @@ span {
     margin: 0;
     font-family: var(--font-family);
 }
+
+h1 {
+    font-size: 1em;
+}
+
+h2, p {
+    text-align: center;
+}
+
 
 /* 💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗 */
 
@@ -98,3 +107,211 @@ article section{
     align-items: center;
 
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form > label {
+    text-align: center;
+}
+
+#chatInput {
+    background: white;
+    padding: 15px 50px;
+    border-radius: 15px;
+    border: 3px solid #8EC2E7;
+    font-size: 1rem;
+    text-align: center;
+    resize: none;
+    overflow-y: auto; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease;
+    font-family: var(--font-family);
+    min-height: 50px;
+    max-height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* .card #chatInput{
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-size: 1em;
+    width: 250px;
+} */
+
+
+/* Carousel */
+.carousel-container {
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .carousel-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  
+  .card {
+    flex: 0 0 calc(100% - 16px);
+    background: lightblue;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    scroll-snap-align: start;
+    min-height: 260px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #333;
+  }
+  
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+
+  }
+  
+  label {
+    background-color: var(--color-white);
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    font-weight: var(--font-normal);
+    font-family: var(--font-family);
+    text-align: center;
+    cursor: pointer;
+    flex-grow: 1;
+    flex-basis: calc(33.33% - 20px); /* 3 per row on desktop */
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 8px;
+  }
+  
+  .carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-dots .dot.active {
+    background-color: #007bff;
+  }
+  
+
+  .control-chat, .control-chat-blue{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .control-chat button {
+        width: 100%;
+        padding: 15px 20px;
+        border-radius: 15px;
+        border: none;
+        font-size: 1.3em;
+        background-color: var(--color-pink);
+        color: black;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(0);
+        font-family: var(--font-family);
+    }
+    
+    .control-chat button:active {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transform: translateY(2px); /* simuleert indrukken */
+        opacity: 0.95;
+    }
+    
+    /* Voor meerdere knoppen met aparte kleuren */
+    .control-chat button:nth-of-type(1) {
+        background-color: var(--color-pink);
+    }
+    
+    .control-chat button:nth-of-type(2) {
+        background-color: rgb(245, 212, 251);
+    }
+    
+    
+    .control-chat-blue button{
+        padding: 5px 5px;
+        height: 50px;
+        aspect-ratio: 2/1;
+        border: none;
+        font-size: 1.3em;
+        background-color: transparent;
+        color: transparent;
+    
+        &:nth-of-type(1){
+            background-image: url(/images/arrow-left.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
+        &:nth-of-type(2){
+            background-image: url(/images/arrow-right.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+
+    #copyMessage{
+        background-color: rgb(183, 244, 183);
+        padding: 15px 20px;
+        border-radius: 15px;
+        text-align: center;
+        display: none;
+    }
