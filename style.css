@@ -124,6 +124,7 @@ section {
 
 form > label {
     text-align: center;
+    
 }
 
 #chatInput {
@@ -198,7 +199,6 @@ form > label {
   .card ul {
     list-style: none;
     padding: 0;
-    margin: 2px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -208,8 +208,8 @@ form > label {
   
   label {
     background-color: var(--color-white);
-    padding: 20px 30px;
-    border-radius: 15px;
+    border-radius: 5px;
+    padding: 10px 45px;
     border: 2px solid transparent;
     font-size: 1rem;
     font-weight: var(--font-normal);
@@ -315,3 +315,20 @@ form > label {
         text-align: center;
         display: none;
     }
+
+    .filter-options{
+        margin: 5px;
+    }
+
+    .filter-options button{
+        padding: 10px 30px;
+        border-radius: 10px;
+        border-color: transparent;
+        color: white;
+        background-color: #8EC2E7;
+
+        &:nth-of-type(1){
+            background-color: #3485BF;
+        }
+    }
+
