@@ -1,6 +1,8 @@
 console.log('hi, its working!');
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    // ⭐️ Variabelen
     const chatInput = document.getElementById("chatInput");
     const allCheckboxes = document.querySelectorAll(".card label input[type='checkbox']");
     const copyButton = document.querySelector(".control-chat button:nth-of-type(2)");
@@ -13,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let selectedPhrases = [];
 
-    // ✅ Checkbox interactie
+    // aangevinkte inputs worden toegevoegd aan de array = selectedPhrases
     allCheckboxes.forEach((checkbox) => {
         checkbox.addEventListener("change", () => {
             const text = checkbox.parentElement.textContent.trim();
@@ -29,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // ✅ Auto resize textarea
+
+    // Resizing textarea op basis van chatInput
     function autoResizeTextarea(textarea) {
         textarea.style.height = "auto";
         textarea.style.height = `${textarea.scrollHeight}px`;
@@ -37,8 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     chatInput.addEventListener("input", () => autoResizeTextarea(chatInput));
     autoResizeTextarea(chatInput);
-
-    // ✅ Kopiëren
+  
+    // ⭐️ copy & reset ⭐️//
     copyButton.addEventListener("click", (e) => {
         e.preventDefault();
         navigator.clipboard.writeText(chatInput.value).then(() => {
@@ -65,7 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
         autoResizeTextarea(chatInput);
     });
 
-    // ✅ Filter A-Z en Z-A met behoud van checkboxstatus
+    // claude ai : https://claude.ai/share/9172fb17-f704-4b55-b13c-4265729b8468
+    // for filter & carousel
+    // ✅ Filter A-Z en Z-A 
     filterButtons.forEach(btn => {
         btn.addEventListener("click", (e) => {
             // Prevent form submission since buttons are inside a form
@@ -132,6 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+
+
 
     // ✅ Carousel dots
     cards.forEach((_, index) => {
