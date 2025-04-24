@@ -1,4 +1,4 @@
-/* Custom properties */
+/* 💗 Custom properties 💗 */
 :root {
     --color-black: #000;
     --color-white: #fff;
@@ -13,7 +13,7 @@
     --font-normal: 400;
 }
 
-/* basic styling */
+/* 💗 Basic styling 💗 */
 body {
     margin: 0;
     padding: 0;
@@ -72,6 +72,7 @@ p {
 
 /* 💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗 */
 
+/* 💗 Header 💗 */
 header {
     display: flex;
     gap: 10px;
@@ -94,6 +95,10 @@ header a {
 
 }
 
+
+/* 💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗 */
+
+/* 💗 Main 💗 */
 main article {
     display: flex;
     flex-direction: column;
@@ -109,6 +114,17 @@ article section {
 
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* 💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗 */
+
+/* 💗 form 💗 */
+
 form {
     display: flex;
     flex-direction: column;
@@ -117,16 +133,11 @@ form {
     text-align: center;
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
 form>label {
     text-align: center;
-
 }
+
 
 #chatInput {
     background: white;
@@ -145,7 +156,6 @@ form>label {
     width: 100%;
     box-sizing: border-box;
 }
-
 
 
 .carousel-container {
@@ -191,7 +201,6 @@ form>label {
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;
-
 }
 
 label {
@@ -206,7 +215,6 @@ label {
     cursor: pointer;
     flex-grow: 1;
     flex-basis: calc(33.33% - 20px);
-    /* 3 per row on desktop */
     transition: all 0.2s ease-in-out;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
@@ -214,6 +222,11 @@ label {
 input[type="checkbox"] {
     display: none;
 }
+
+
+/* 💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗 */
+
+/* 💗 Carousel 💗 */
 
 .carousel-dots {
     display: flex;
@@ -235,7 +248,9 @@ input[type="checkbox"] {
     background-color: #007bff;
 }
 
+/* 💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗 */
 
+/* 💗 Chats 💗 */
 .control-chat,
 .control-chat-blue {
     display: flex;
@@ -302,7 +317,7 @@ input[type="checkbox"] {
     }
 }
 
-
+/* 💗 copy feedback melding 💗 */
 #copyMessage {
     background-color: rgb(183, 244, 183);
     padding: 15px 20px;
@@ -311,6 +326,11 @@ input[type="checkbox"] {
     display: none;
     font-family: var(--font-family);
 }
+
+
+/* 💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗 */
+
+/* 💗 filters 💗 */
 
 .filter-container {
     margin: 1rem 0;
@@ -341,7 +361,10 @@ input[type="checkbox"] {
 }
 
 
-/* Extra na test 4 */
+
+/* 💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗💗 */
+
+/* 💗 Extra na test 4 💗 */
 .chat-bubble {
     display: flex;
     align-items: center;
