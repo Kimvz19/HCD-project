@@ -127,7 +127,7 @@ form > label {
     
 }
 
-#chatInput {
+textarea {
     background: white;
     padding: 15px 50px;
     border-radius: 15px;
@@ -259,6 +259,7 @@ form > label {
         padding: 15px 20px;
         border-radius: 15px;
         border: none;
+    
         font-size: 1.3em;
         background-color: var(--color-pink);
         color: black;
@@ -267,6 +268,10 @@ form > label {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         transform: translateY(0);
         font-family: var(--font-family);
+
+        &:nth-of-type(1){
+            margin-right: 5px;
+        }
     }
     
     .control-chat button:active {
