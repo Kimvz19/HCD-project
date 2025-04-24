@@ -2,7 +2,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding: 20px;
+    padding: 50px;
 }
 
 h1{

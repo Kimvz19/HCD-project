@@ -129,7 +129,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
 }
 
@@ -176,7 +176,7 @@ form>label {
 .card {
     flex: 0 0 calc(100% - 16px);
     background: lightblue;
-    padding: 20px;
+    padding: 45px;
     border-radius: 16px;
     scroll-snap-align: start;
     min-height: 260px;
